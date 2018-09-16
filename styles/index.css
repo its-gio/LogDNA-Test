@@ -1,0 +1,60 @@
+/* Global */
+* {box-sizing: border-box;}
+
+body, html{
+    margin: 0;
+}
+
+/* Header (Title and Hamburger Menu) */
+header { 
+    background: #efefef;
+    position: relative;
+    padding: 1px;
+    padding-left: 70px;
+    box-shadow: 0px 2px 0px #ccc;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin: 15px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #272727;
+}
+
+header a {
+    font-size: 1.5em;
+    padding: 16px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: #4d4d4d;
+}
+
+
+/* Logo */
+aside {
+    top: 0;
+    height: 100vh;
+    position: absolute;
+    background-color: #333333;
+}
+
+.logo-container{
+    width: 60px;
+    height: 60px;
+}
+
+.logo-container--inner {
+    background: #db0a5b;
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+}
+
+.logo-container--inner img {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+
+}
