@@ -1,8 +1,19 @@
 const group = document.querySelector(".groups");
-const posts = document.querySelector(".post-content--text");
+const posts = document.querySelector(".posts");
 
 function grabPosts(data, i) {
-    console.log(data.group1);
+    // data[`group${i + 1}`].forEach(text => console.log(text));
+    let template = data[`group${i + 1}`].forEach((content, i) => {
+        let milk = content[`post${i + 1}`];
+        console.log(milk.Title);
+        return `
+            <div>
+            <h1>${milk.Title}</h1>
+            </div>
+        `
+    });
+    console.log(template);
+    posts.innerHTML = template;
 }
 
 // Adds a list item to unordered list with an image and h5 text
