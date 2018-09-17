@@ -1,5 +1,10 @@
 @import url("./fonts.css");
 
+/* Variables */
+:root {
+    --header-spacing: calc(100vh - 65px); 
+}
+
 /* Global */
 * {box-sizing: border-box;}
 
@@ -12,8 +17,8 @@ body, html{
 header { 
     background: #efefef;
     position: relative;
-    padding: 1px;
-    padding-left: 60px;
+    padding: 1.2px;
+    padding-left: 65px;
     box-shadow: 0px 2px 0px #ccc;
 }
 
@@ -83,4 +88,49 @@ aside {
 .group--index {
     color: #fff;
     margin: 0;
+}
+
+/********** Posts area and content area **********/
+.posts-and-content{
+    display: flex;
+    margin-left: 65px;
+    height: var(--header-spacing);
+}
+
+/* Posts */
+.posts {
+    width: 30vw;
+    background: #f1f1f2;    
+}
+
+/* Post Content */
+.post-content {
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+}
+
+.post-content--text {
+    width: 100%;
+    height: 90%;
+}
+
+.post-content--container-input {
+    height: 10%;
+    text-align: center;
+    box-shadow: 0px -1px 0px #eee;
+}
+
+.post-content--container-input input{
+    padding: 10px;
+    width: 95%;
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+    border: #eee 1px solid;
+    border-radius: 3px;
+}
+
+.post-content--container-input input::placeholder {
+    color: #ccc;
 }
