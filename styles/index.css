@@ -1,10 +1,11 @@
+@import url("./fonts.css");
+
 /* Global */
 * {box-sizing: border-box;}
 
 body, html{
     margin: 0;
-    font-family: sans-serif;
-    font-weight: lighter;
+    font-family: OpenSans-Light;
 }
 
 /* Header (Title and Hamburger Menu) */
@@ -12,7 +13,7 @@ header {
     background: #efefef;
     position: relative;
     padding: 1px;
-    padding-left: 70px;
+    padding-left: 60px;
     box-shadow: 0px 2px 0px #ccc;
 }
 
@@ -20,6 +21,7 @@ header h1 {
     font-size: 1.5em;
     margin: 15px;
     color: #272727;
+    
 }
 
 header a {
@@ -41,8 +43,8 @@ aside {
 }
 
 .logo-container{
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
 }
 
 .logo-container--inner {
