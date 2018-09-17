@@ -3,6 +3,8 @@
 
 body, html{
     margin: 0;
+    font-family: sans-serif;
+    font-weight: lighter;
 }
 
 /* Header (Title and Hamburger Menu) */
@@ -17,8 +19,6 @@ header {
 header h1 {
     font-size: 1.5em;
     margin: 15px;
-    font-family: sans-serif;
-    font-weight: lighter;
     color: #272727;
 }
 
@@ -32,7 +32,7 @@ header a {
 }
 
 
-/* Logo */
+/* Groups */
 aside {
     top: 0;
     height: 100vh;
@@ -57,4 +57,28 @@ aside {
     height: 70%;
     margin: auto;
 
+}
+
+.groups {
+    padding: 0;
+    list-style-type: none;
+}
+
+.group {
+    width: 100%;
+    height: 60px;
+    margin: 15px 0px;
+    text-align: center;
+}
+
+.group--image {
+    background-image: url("../img/group-default.png");
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+.group--index {
+    color: #fff;
+    margin: 0;
 }
