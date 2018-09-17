@@ -78,6 +78,10 @@ aside {
     text-align: center;
 }
 
+.group:hover {
+    cursor: pointer;
+}
+
 .group--image {
     background-image: url("../img/group-default.png");
     width: 70%;
@@ -100,13 +104,15 @@ aside {
 /* Posts */
 .posts {
     width: 30vw;
-    background: #f1f1f2;    
+    overflow: auto;
+    background: #f1f1f2;
 }
 
 /* Post Content */
 .post-content {
     display: flex;
     width: 70vw;
+    overflow: auto;
     flex-direction: column;
 }
 

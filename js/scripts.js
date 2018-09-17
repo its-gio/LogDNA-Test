@@ -3,16 +3,12 @@ const posts = document.querySelector(".posts");
 
 function grabPosts(data, i) {
     // data[`group${i + 1}`].forEach(text => console.log(text));
-    let template = data[`group${i + 1}`].forEach((content, i) => {
-        let milk = content[`post${i + 1}`];
-        console.log(milk.Title);
-        return `
-            <div>
-            <h1>${milk.Title}</h1>
-            </div>
-        `
-    });
-    console.log(template);
+    let template = data[`group${i + 1}`].map((content, i) => {
+        let text = content[`post${i + 1}`];
+        return `<div>
+            <h3>${text.Title}</h3>
+        </div>`;
+    }).join('');
     posts.innerHTML = template;
 }
 
