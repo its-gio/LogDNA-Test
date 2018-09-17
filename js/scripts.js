@@ -1,8 +1,8 @@
 const group = document.querySelector(".groups");
 const posts = document.querySelector(".post-content--text");
 
-function grabPosts(data) {
-
+function grabPosts(data, i) {
+    console.log(data.group1);
 }
 
 // Adds a list item to unordered list with an image and h5 text
@@ -20,7 +20,7 @@ function createGroups(data, i) {
     li.appendChild(groupNum).classList.add("group--index");
     // Making callback function and adding event listener to list item
     li.addEventListener("click", function () {
-        grabPosts(data);
+        grabPosts(data, i);
     });
     // Appending List item element to unorded list element with classnames
     group.appendChild(li).classList.add("group", `group${i + 1}`);
