@@ -4,10 +4,12 @@ const posts = document.querySelector(".posts");
 function grabPosts(data, i) {
     // data[`group${i + 1}`].forEach(text => console.log(text));
     let template = data[`group${i + 1}`].map((content, i) => {
-        let text = content[`post${i + 1}`];
-        return `<div>
-            <h3>${text.Title}</h3>
-        </div>`;
+        let Text = content[`post${i + 1}`];
+        return `<div class="posts--list-item">
+            <h5 class="posts--list-item__heading">${Text.Title}</h5>
+            <p class="posts--list-item__content">${Text.Content.substring(0, 230)}...</p>
+            
+        </div><hr/>`;
     }).join('');
     posts.innerHTML = template;
 }
