@@ -17,9 +17,14 @@ function getContent(content, i) {
     const Piece = content[`post${i}`];
     const post = `
     <div class="post-content--text__inner">
-        <h2>${Piece.title}</h2>
-        <h4>${Piece.subTitle}</h4>
-        <p>${Piece.content}</p>
+        <h3 class="post-content--text__content-header">${Piece.title}</h3>
+        <h4 class="post-content--text__subtitle">${Piece.subTitle}</h4>
+        <p class="post-content--text__para-1">${Piece.content}</p>
+        <figure>
+            <img src="${Piece.img}" alt="Trulli" style="width:100%">
+            <figcaption>${Piece.imgTitle}</figcaption>
+        </figure>
+        <p class="post-content--text__para-2">${Piece.content2}</p>
     </div>
     `;
     postContent.innerHTML = post;
@@ -37,7 +42,7 @@ function grabPosts(data, i) {
         postListItem.classList.add("posts--list-item");
         const preview = `
             <h5 class="posts--list-item__heading">${Text.title}</h5>
-            <p class="posts--list-item__content">${Text.content.substring(0, 230)}...</p>
+            <p class="posts--list-item__content">${Text.content.substring(0, 213)}...</p>
         `;
         postListItem.innerHTML = preview;
         postListItem.addEventListener("click", function () {

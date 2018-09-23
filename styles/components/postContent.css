@@ -2,13 +2,31 @@
 .post-content {
     display: flex;
     width: 70vw;
-    overflow: auto;
     flex-direction: column;
 }
 
 .post-content--text {
     width: 100%;
     height: 90%;
+    overflow: auto;
+}
+
+.post-content--text__inner{
+    padding: 30px 10px 0px 30px;
+}
+
+.post-content--text__content-header {
+    margin: 0;
+    font-family: OpenSans-Bold;
+}
+
+.post-content--text__subtitle{
+    font-family: OpenSans-Italic;
+    font-weight: initial;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #eee;
+    max-width: 75%;
+    margin: 0;
 }
 
 .post-content--container-input {
