@@ -42,7 +42,7 @@ function grabPosts(data, i) {
         postListItem.classList.add("posts--list-item");
         const preview = `
             <h5 class="posts--list-item__heading">${Text.title}</h5>
-            <p class="posts--list-item__content">${Text.content.substring(0, 213)}...</p>
+            <p class="posts--list-item__content">${Text.content.substring(0, 240)}...</p>
         `;
         postListItem.innerHTML = preview;
         postListItem.addEventListener("click", function () {
