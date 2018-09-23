@@ -1,6 +1,7 @@
 const groupMarker = document.querySelector(".active-group");
 const groups = document.querySelector(".groups");
 const posts = document.querySelector(".posts");
+const postContent = document.querySelector(".post-content--text");
 
 function handleActiveGroup(liCoords) {
     const groupsCoord = groups.getBoundingClientRect();
@@ -13,12 +14,18 @@ function handleActiveGroup(liCoords) {
 
 function getContent(content, i) {
     console.log(content[`post${i}`]);
+    const postListItem = document.createElement("div");
+    const post = `
+    `
+    postContent
 };
 
 
 function grabPosts(data, i) {
     // data[`group${i + 1}`].forEach(text => console.log(text));
+    // Makes sure there is nothing inside of posts list before grabbing new list
     if (posts.innerHTML != "") posts.innerHTML = "";
+    // Template for each item in posts list
     data[`group${i}`].forEach((content, count) => {
         let Text = content[`post${count + 1}`];
         const postListItem = document.createElement("div");
