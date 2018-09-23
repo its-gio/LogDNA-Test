@@ -12,7 +12,7 @@
 }
 
 .post-content--text__inner{
-    padding: 30px 10px 0px 30px;
+    padding: 25px 10px 0px 25px;
 }
 
 .post-content--text__content-header {
@@ -25,7 +25,7 @@
     font-weight: initial;
     padding-bottom: 1em;
     border-bottom: 2px solid #eee;
-    max-width: 75%;
+    max-width: 85%;
     margin: 0;
 }
 
@@ -33,11 +33,20 @@
     float: left;
     font-size: 3em;
     line-height: 30px;
-    padding-top: 5px;
+    padding-top: 3px;
     padding-right: 5px;
 }
 
+.post-content--text__inner figure {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
 
+.post-content--text__inner figure figcaption {
+    font-family: OpenSans-Italic;
+    font-size: .7em;
+}
 
 /* Input section */
 .post-content--container-input {
