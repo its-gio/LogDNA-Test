@@ -1,15 +1,30 @@
-const group = document.querySelector(".groups");
+const groupMarker = document.querySelector(".active-group");
+const groups = document.querySelector(".groups");
 const posts = document.querySelector(".posts");
+
+function handleActiveGroup(liCoords) {
+    const groupsCoord = groups.getBoundingClientRect();
+    groupMarker.classList.add("active");
+    const calcCoords = {
+        top: (liCoords.top) - (groupsCoord.top / 1.7),
+    }
+    console.log(calcCoords.top);
+    groupMarker.style.setProperty('top', `${calcCoords.top}px`);
+}
+
+function getContent(index) {
+    console.log(index);
+};
+
 
 function grabPosts(data, i) {
     // data[`group${i + 1}`].forEach(text => console.log(text));
-    let template = data[`group${i + 1}`].map((content, i) => {
-        let Text = content[`post${i + 1}`];
+    const template = data[`group${i + 1}`].map((content, index) => {
+        let Text = content[`post${index + 1}`];
         return `<div class="posts--list-item">
             <h5 class="posts--list-item__heading">${Text.Title}</h5>
             <p class="posts--list-item__content">${Text.Content.substring(0, 230)}...</p>
-            
-        </div><hr/>`;
+        </div>`;
     }).join('');
     posts.innerHTML = template;
 }
@@ -30,9 +45,10 @@ function createGroups(data, i) {
     // Making callback function and adding event listener to list item
     li.addEventListener("click", function () {
         grabPosts(data, i);
+        handleActiveGroup(li.getBoundingClientRect());
     });
     // Appending List item element to unorded list element with classnames
-    group.appendChild(li).classList.add("group", `group${i + 1}`);
+    groups.appendChild(li).classList.add("group", `group${i + 1}`);
 }
 
 // Using data for function above

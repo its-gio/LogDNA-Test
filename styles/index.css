@@ -66,13 +66,28 @@ aside {
 
 .groups {
     padding: 0;
+    margin: 0;
     list-style-type: none;
+    position: relative;
+}
+
+.active-group {
+    background: #db0a5b;
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    border-radius: 100px;
+    opacity: 0;
+}
+
+.active-group.active{
+    opacity: 1;
 }
 
 .group {
     width: 100%;
     height: 60px;
-    margin: 15px 0px;
+    padding: 10px 0px;
     text-align: center;
 }
 
@@ -108,7 +123,7 @@ aside {
 
 .posts--list-item {
     padding: 10px;
-
+    border-bottom: 1px solid #ccc;
 }
 
 .posts--list-item__heading {
@@ -118,11 +133,6 @@ aside {
 
 .posts--list-item__content {
     margin: 0;
-}
-
-hr {
-    margin: 0;
-    border: 1px solid #ccc;
 }
 
 /* Post Content */
