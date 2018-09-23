@@ -16,6 +16,10 @@
     border-bottom: 1px solid #ccc;
 }
 
+.posts--list-item:hover {
+    cursor: pointer;
+}
+
 .posts--list-item__heading {
     margin: 0;
     font-family: OpenSans-Bold;
