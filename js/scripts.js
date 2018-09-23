@@ -13,26 +13,31 @@ function handleActiveGroup(liCoords) {
 }
 
 function getContent(content, i) {
-    console.log(content[`post${i}`]);
-    const postListItem = document.createElement("div");
+    // console.log(content[`post${i}`]);
+    const Piece = content[`post${i}`];
     const post = `
-    `
-    postContent
+    <div class="post-content--text__inner">
+        <h2>${Piece.title}</h2>
+        <h4>${Piece.subTitle}</h4>
+        <p>${Piece.content}</p>
+    </div>
+    `;
+    postContent.innerHTML = post;
 };
 
 
 function grabPosts(data, i) {
     // data[`group${i + 1}`].forEach(text => console.log(text));
     // Makes sure there is nothing inside of posts list before grabbing new list
-    if (posts.innerHTML != "") posts.innerHTML = "";
+    posts.innerHTML = "";
     // Template for each item in posts list
     data[`group${i}`].forEach((content, count) => {
         let Text = content[`post${count + 1}`];
         const postListItem = document.createElement("div");
         postListItem.classList.add("posts--list-item");
         const preview = `
-            <h5 class="posts--list-item__heading">${Text.Title}</h5>
-            <p class="posts--list-item__content">${Text.Content.substring(0, 230)}...</p>
+            <h5 class="posts--list-item__heading">${Text.title}</h5>
+            <p class="posts--list-item__content">${Text.content.substring(0, 230)}...</p>
         `;
         postListItem.innerHTML = preview;
         postListItem.addEventListener("click", function () {
