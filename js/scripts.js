@@ -8,8 +8,7 @@ function handleActiveGroup(liCoords) {
     const calcCoords = {
         top: (liCoords.top) - (groupsCoord.top / 1.7),
     }
-    console.log(calcCoords.top);
-    groupMarker.style.setProperty('top', `${calcCoords.top}px`);
+    groupMarker.style.setProperty('transform', `translate(0px, ${calcCoords.top}px)`);
 }
 
 function getContent(index) {
@@ -44,7 +43,9 @@ function createGroups(data, i) {
     li.appendChild(groupNum).classList.add("group--index");
     // Making callback function and adding event listener to list item
     li.addEventListener("click", function () {
+        // Populates posts list
         grabPosts(data, i);
+        // Moves active group when clicked
         handleActiveGroup(li.getBoundingClientRect());
     });
     // Appending List item element to unorded list element with classnames

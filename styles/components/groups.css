@@ -39,6 +39,7 @@ aside {
     position: absolute;
     border-radius: 100px;
     opacity: 0;
+    transition: .5s;
 }
 
 .active-group.active{
