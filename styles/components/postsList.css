@@ -1,0 +1,26 @@
+.posts-and-content{
+    display: flex;
+    margin-left: 65px;
+    height: var(--header-spacing);
+}
+
+/* Posts */
+.posts {
+    width: 30vw;
+    overflow: auto;
+    background: #f1f1f2;
+}
+
+.posts--list-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.posts--list-item__heading {
+    margin: 0;
+    font-family: OpenSans-Bold;
+}
+
+.posts--list-item__content {
+    margin: 0;
+}
