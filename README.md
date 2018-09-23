@@ -1,5 +1,5 @@
 # LogDNA-Test
 A simple HTML/CSS text from Log DNA
 
-Inline-style: 
+Image of test: 
 ![alt text](./css_challenge.png "Test Image")
