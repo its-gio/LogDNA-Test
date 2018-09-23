@@ -3,6 +3,7 @@
     display: flex;
     width: 70vw;
     flex-direction: column;
+    position: relative;
 }
 
 .post-content--text {

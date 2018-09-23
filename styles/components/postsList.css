@@ -8,6 +8,7 @@
 .posts {
     width: 30vw;
     overflow: auto;
+    overflow-y: hidden;
     background: #f1f1f2;
 }
 

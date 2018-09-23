@@ -1,4 +1,5 @@
 const groupMarker = document.querySelector(".active-group");
+const postMarker = window.getComputedStyle(document.querySelector(".post-content"), ':before');
 const groups = document.querySelector(".groups");
 const posts = document.querySelector(".posts");
 const postContent = document.querySelector(".post-content--text");
@@ -42,11 +43,12 @@ function grabPosts(data, i) {
         postListItem.classList.add("posts--list-item");
         const preview = `
             <h5 class="posts--list-item__heading">${Text.title}</h5>
-            <p class="posts--list-item__content">${Text.content.substring(0, 275)}...</p>
+            <p class="posts--list-item__content">${Text.content.substring(0, 300)}...</p>
         `;
         postListItem.innerHTML = preview;
         postListItem.addEventListener("click", function () {
             getContent(content, count + 1);
+            handleActivepost(postListItem.getBoundingClientRect())
         });
         posts.appendChild(postListItem);
     });
