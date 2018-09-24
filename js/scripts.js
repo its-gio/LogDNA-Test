@@ -3,6 +3,12 @@ const postMarker = window.getComputedStyle(document.querySelector(".post-content
 const groups = document.querySelector(".groups");
 const posts = document.querySelector(".posts");
 const postContent = document.querySelector(".post-content--text");
+const nav = document.querySelector("#navigation");
+const navList = document.querySelector(".nav-list");
+
+function showNav() {
+    navList.classList.add("active");
+}
 
 function handleActiveGroup(liCoords) {
     const groupsCoord = groups.getBoundingClientRect();
@@ -81,3 +87,4 @@ function createGroups(data, i) {
 
 // Using data for function above
 data.forEach((data, i) => createGroups(data, i + 1));
+nav.addEventListener("click", showNav);

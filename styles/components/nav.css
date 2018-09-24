@@ -1,0 +1,33 @@
+.nav-list {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, .8);
+    z-index: 1;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;    
+    justify-content: center;
+    opacity: 0;
+    display: flex;
+    transition: .5s;
+}
+
+.nav-list.active {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+}
+
+.nav-list a{
+    color: #fff;
+    text-decoration: none;
+    display: -webkit-inline-box;
+    padding: 10px;
+    font-size: 3em;
+}
+
+.nav-list li {
+    list-style: none;
+}
